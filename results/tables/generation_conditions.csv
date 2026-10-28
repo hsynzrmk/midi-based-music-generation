@@ -1,0 +1,8 @@
+condition,description,n_runs,seeds,generated_tokens_per_file,temperature,playback_fs
+gru_random_uniform,"GRU model; seed window = 50 token ids drawn uniformly from the vocabulary (original ""random notes"")",10,SEED+0..SEED+9 (SEED=666),300,1.0,5
+gru_random_unigram,GRU model; seed window = 50 tokens drawn from the training token distribution (control),10,SEED+0..SEED+9 (SEED=666),300,1.0,5
+gru_one_note,GRU model; seed window = 49 rest tokens + single note '72' (original 'single note'),10,SEED+0..SEED+9 (SEED=666),300,1.0,5
+lstm_random_uniform,LSTM baseline; same as gru_random_uniform,10,SEED+0..SEED+9 (SEED=666),300,1.0,5
+lstm_one_note,LSTM baseline; same as gru_one_note,10,SEED+0..SEED+9 (SEED=666),300,1.0,5
+baseline_unigram,i.i.d. sampling from the training token distribution,10,SEED+0..SEED+9 (SEED=666),300,1.0,5
+baseline_markov1,"order-1 Markov chain over frame tokens, trained on the same pieces",10,SEED+0..SEED+9 (SEED=666),300,1.0,5

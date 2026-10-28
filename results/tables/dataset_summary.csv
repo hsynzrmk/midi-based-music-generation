@@ -1,0 +1,4 @@
+split,n_pieces,hours,n_notes,share_single_instrument,maestro_files_in_folder
+train,80,12.539,438434,1.0,1184
+validation,10,1.752,60943,1.0,1184
+test,10,1.024,37736,1.0,1184

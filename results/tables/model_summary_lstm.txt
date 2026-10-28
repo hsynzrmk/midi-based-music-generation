@@ -1,0 +1,40 @@
+Model: "generate_scores_lstm"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 50)]              0         
+                                                                 
+ embedding_1 (Embedding)     (None, 50, 100)           4953300   
+                                                                 
+ bidirectional_3 (Bidirectio  (None, 50, 256)          234496    
+ nal)                                                            
+                                                                 
+ seq_self_attention_2 (SeqSe  [(None, 50, 256),        65537     
+ lfAttention)                 (None, 50, 50)]                    
+                                                                 
+ dropout_3 (Dropout)         (None, 50, 256)           0         
+                                                                 
+ bidirectional_4 (Bidirectio  (None, 50, 256)          394240    
+ nal)                                                            
+                                                                 
+ seq_self_attention_3 (SeqSe  [(None, 50, 256),        65537     
+ lfAttention)                 (None, 50, 50)]                    
+                                                                 
+ dropout_4 (Dropout)         (None, 50, 256)           0         
+                                                                 
+ bidirectional_5 (Bidirectio  (None, 256)              394240    
+ nal)                                                            
+                                                                 
+ dropout_5 (Dropout)         (None, 256)               0         
+                                                                 
+ dense_2 (Dense)             (None, 64)                16448     
+                                                                 
+ leaky_re_lu_1 (LeakyReLU)   (None, 64)                0         
+                                                                 
+ dense_3 (Dense)             (None, 49533)             3219645   
+                                                                 
+=================================================================
+Total params: 9,343,443
+Trainable params: 9,343,443
+Non-trainable params: 0
+_________________________________________________________________

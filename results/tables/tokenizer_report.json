@@ -1,0 +1,9 @@
+{
+  "vocab_size_incl_rest_token": 49532,
+  "n_training_tokens (onset frames)": 196904,
+  "singleton_tokens_pct": 50.77,
+  "single_note_token_share_pct": 15.8,
+  "chord_token_share_pct": 84.2,
+  "mean_notes_per_token": 3.989,
+  "max_notes_per_token": 38
+}

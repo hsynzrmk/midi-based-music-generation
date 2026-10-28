@@ -1,0 +1,43 @@
+Group,Parameter,Value
+Data,Dataset / version,maestro-v1.0.0
+Data,MIDI files found in folder,1184
+Data,Split protocol,"official MAESTRO split (csv column ""split""), seeded random subset of each split"
+Data,Pieces train / val / test,80 / 10 / 10
+Data,Sequences val / test (in-vocabulary targets only),19387 / 10204
+Data,Sequences val / test before removing OOV targets,31449 / 18355
+Data,Share of targets removed (OOV) val / test,38.4% / 44.4%
+Data,Training sequences per epoch (full batches),224544
+Data,OOV token rate val / test,38.0% / 43.8%
+Data,Frames per second (fs),5
+Data,Input sequence length (steps),50
+Data,Context window (s),10.0
+Data,Vocabulary size (incl. rest token),49532
+Model,Cell type,GRU
+Model,Embedding dimension,100
+Model,Recurrent layers,3 x Bidirectional(GRU) 
+Model,Units per direction (layer output = 2x),128
+Model,Self-attention layers,2 (after recurrent layer 1 and 2)
+Model,Self-attention type / heads / width,SeqSelfAttention multiplicative / 1 head / 50
+Model,Attention activation / regularisers,"sigmoid / L2 1e-4 (kernel), L1 1e-4 (bias), attention reg. 1e-4"
+Model,"Dropout rate (after att.1, att.2, last recurrent layer)",0.3
+Model,Dense layer,64 units + LeakyReLU
+Model,Output dimension,49533 (softmax)
+Model,Trainable parameters,9090003
+Training,Optimizer / learning rate,Nadam / 0.0010000000474974513
+Training,Loss,sparse categorical cross-entropy
+Training,Gradient-step batch size (sequences),96
+Training,Pieces decoded per loading chunk,16
+Training,Epochs,50
+Training,Epoch with best validation loss (weights kept),5
+Training,Training time (s),6868.7
+Training,Random seed,666
+Generation,Temperature,1.0
+Generation,Generated notes per file / runs per condition,300 / 10
+Generation,Playback rate (fs),5
+Software,Python,3.10.22
+Software,TensorFlow / Keras,2.10.0 / 2.10.0
+Software,NumPy,1.26.4
+Software,pretty_midi,0.2.11.post0
+Software,pandas / matplotlib,2.3.3 / 3.10.9
+Hardware,GPU,NVIDIA GeForce RTX 5070
+Hardware,CPU / OS,"Intel64 Family 6 Model 167 Stepping 1, GenuineIntel / Windows-10-10.0.26200-SP0"

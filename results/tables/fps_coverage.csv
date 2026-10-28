@@ -1,0 +1,5 @@
+fs,frame_ms,context_window_s (50 steps),notes_surviving_pct,mean_onset_shift_ms,n_notes_checked
+5,200.0,10.0,56.93,99.4,98781
+10,100.0,5.0,77.79,49.7,98781
+20,50.0,2.5,94.27,24.8,98781
+30,33.3,1.7,98.84,16.5,98781
