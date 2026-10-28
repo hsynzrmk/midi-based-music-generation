@@ -27,8 +27,7 @@ except ImportError:          # statistical tests are skipped if scipy is absent
 
 
 # =============================================================================
-# SECTION A -- CONFIG, SEEDS, OUTPUT FOLDERS            [R1-2][R2-3]
-# One place for every number that the reviewers asked to see in a table.
+# SECTION A -- CONFIG, SEEDS, OUTPUT FOLDERS
 # =============================================================================
 SEED = 666                                   # [R1-2][R2-3] reproducibility
 random.seed(SEED)
