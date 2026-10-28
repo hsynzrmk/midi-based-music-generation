@@ -60,24 +60,6 @@ recurrent layers, and two self-attention layers. Dropout is applied
 after the attention layers and the final recurrent layer. A dense layer
 with LeakyReLU activation precedes the softmax output layer.
 
-  Parameter                         Setting
-
-  Recurrent cell                    GRU
-  Recurrent layers                  3 bidirectional layers
-  Units per direction               128
-  Embedding dimension               100
-  Self-attention layers             2
-  Attention type                    Multiplicative self-attention
-  Attention width                   50
-  Dropout                           0.3
-  Dense layer                       64 units with LeakyReLU
-  Optimizer                         Nadam
-  Loss                              Sparse categorical cross-entropy
-  Training epochs                   50
-  Sequence length                   50 frames
-  Batch size for gradient updates   96 sequences
-  Random seed                       666
-
 The model with the lowest validation loss is retained for evaluation.
 The software and hardware environment should be reported using the
 values exported by the experiment script, because these depend on the
