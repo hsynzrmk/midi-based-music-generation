@@ -1,4 +1,4 @@
-# MIDI-Based Music Generation via Gated Recurrent Units
+# MIDI-Based Music Generation via Gated Recurrent Units (JCoSML)
 
 
 This study investigates symbolic piano music generation using a
