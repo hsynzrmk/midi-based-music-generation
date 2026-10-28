@@ -1,6 +1,5 @@
 # MIDI-Based Music Generation via Gated Recurrent Units
 
-## Study overview
 
 This study investigates symbolic piano music generation using a
 bidirectional Gated Recurrent Unit (BiGRU) network with self-attention.
@@ -37,11 +36,10 @@ the dataset as a whole.
 
 ## MIDI representation and tokenization
 
-MIDI performances are converted into piano-roll representations at **5
-frames per second (fps)**. At each frame, simultaneously active pitches
-are represented as a token. A token may therefore represent a single
-note or a chord. Frames without active notes are represented by a rest
-token.
+MIDI performances are converted into piano-roll representations.
+At each frame, simultaneously active pitches are represented as a token. 
+A token may therefore represent a single note or a chord. 
+Frames without active notes are represented by a rest token.
 
 The model uses sequences of 50 consecutive frames as input and predicts
 the next token. At 5 fps, the input context corresponds to 10 seconds.
@@ -134,56 +132,3 @@ include:
 -   rest ratio and estimated tempo;
 -   repeated short patterns; and
 -   divergence between generated and reference pitch distributions.
-
-The generation conditions are compared with real excerpts and with the
-LSTM, first-order Markov, and unigram baselines. Ten independent
-generations per condition support a more systematic comparison than
-inspection of a single generated example. Objective descriptors
-characterize statistical aspects of the output; they do not by
-themselves establish perceptual quality.
-
-## Contribution
-
-This study provides a reproducible framework for symbolic piano music
-generation using a recurrent neural network with self-attention. It
-documents a complete MIDI-to-piano-roll-to-token pipeline, evaluates
-generated sequences through objective musical descriptors across
-repeated generations, and compares the proposed model with independent
-token sampling, a first-order Markov chain, and an LSTM variant. The
-comparisons provide insight into the musical structure captured by the
-recurrent model and the influence of initialization strategy on
-generation outcomes.
-
-## Limitations
-
-The results should be interpreted in light of several limitations. The
-frame-based representation at 5 fps omits some notes from the original
-performances and quantizes note onsets to a 200 ms grid. The token
-vocabulary may be large and sparse, which can contribute to rapid
-overfitting and very short generated notes. The experiments use only 100
-of the 1,184 MAESTRO performances, and each model is trained once.
-Consequently, confidence intervals for next-token prediction results are
-not available from repeated model training.
-
-The objective descriptors measure statistical properties rather than
-musical quality, and no listening test is assumed unless one has
-actually been conducted and documented. The study also does not include
-an ablation study without attention, a systematic temperature analysis,
-or comparisons across context lengths and frame rates. Finally, the
-instrumental arrangement of generated MIDI files is performed manually.
-
-## Reproducibility notes
-
-Before submitting or publishing the final manuscript, confirm the
-following details from the actual run outputs:
-
--   the number of MIDI files successfully loaded in each split;
--   the number of performances that contain a single instrument and the
-    instrument tracks actually used;
--   the vocabulary size and the validation/test out-of-vocabulary rates;
--   the software versions and hardware configuration;
--   the final objective metric values and baseline comparisons; and
--   whether a listening test was conducted.
-
-Do not report numerical results that have not been generated and checked
-from the experiment outputs.
