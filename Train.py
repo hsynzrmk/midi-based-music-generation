@@ -1,31 +1,3 @@
-"""
-Muzik.py  --  REVISED VERSION (response to reviewers)
-=====================================================
-Every addition is tagged in the comments with the reviewer item it answers:
-
-    [R1-n]  Reviewer 1 (Report1.pdf), recommended improvement n
-    [R2-n]  Reviewer 2 (Report2.docx), revision item n
-    [FIX]   bug fix found while revising the code
-
-Where each reviewer item is handled in this file
--------------------------------------------------
- SECTION A  config, seeds, output folders ................ R1-2, R2-3
- SECTION B  data split, dataset/FPS/vocabulary reports ... R1-2, R1-3, R2-3, R2-4
- SECTION C  model (GRU / LSTM switch) + training with
-            validation, loss curves, hyper-parameter table R1-2, R2-3, R2-5
- SECTION D  baselines (unigram, Markov chain, LSTM) ...... R2-5
- SECTION E  generation (fixed conditions, repeated runs,
-            temperature, bug fixes) ...................... R1-5, R2-7, FIX
- SECTION F  objective metrics + statistical tests ........ R1-1, R2-1a, R2-7
- SECTION G  readable Fig. 4, pitch-class / duration plots  R1-7, R1-1
- SECTION H  material for a small listening test .......... R2-1b
- SECTION I  attention visualisation (original) ........... --
-
-Items that can only be fixed in the manuscript text (not in code):
- R1-4, R1-6, R1-8, R2-2, R2-6 and the "minor points" of Reviewer 2.
-
-Outputs go to ./results/{figures,tables,midi,listening_test}
-"""
 import tensorflow as tf
 from tensorflow.keras import backend as K
 import glob
