@@ -1,0 +1,11 @@
+# Requirements for MIDI-Based Music Generation via Gated Recurrent Units
+# Recommended environment: Python 3.10
+# Install with: python -m pip install -r requirements.txt
+
+numpy>=1.23,<2.0
+pandas>=1.5
+matplotlib>=3.6
+scipy>=1.9
+pretty_midi>=0.2.10
+tqdm>=4.64
+tensorflow>=2.10,<2.16
