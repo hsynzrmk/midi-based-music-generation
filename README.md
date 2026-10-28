@@ -61,7 +61,7 @@ after the attention layers and the final recurrent layer. A dense layer
 with LeakyReLU activation precedes the softmax output layer.
 
   Parameter                         Setting
-  --------------------------------- ----------------------------------
+
   Recurrent cell                    GRU
   Recurrent layers                  3 bidirectional layers
   Units per direction               128
